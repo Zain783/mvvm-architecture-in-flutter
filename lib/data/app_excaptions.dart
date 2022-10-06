@@ -7,14 +7,13 @@ class AppException implements Exception {
     return '$_prefix$_message';
   }
 }
-
 class FetchDataException extends AppException {
   FetchDataException([String? message])
       : super(message, 'Error during communication');
 }
 
-class BadDataException extends AppException {
-  BadDataException([String? message]) : super(message, 'Invalid Request');
+class BadRequestException extends AppException {
+  BadRequestException([String? message]) : super(message, 'Invalid Request');
 }
 
 class UnauthorisedDataException extends AppException {
@@ -22,6 +21,6 @@ class UnauthorisedDataException extends AppException {
       : super(message, 'Unauthorised Request');
 }
 
-class InvalidDataException extends AppException {
-  InvalidDataException([String? message]) : super(message, 'invalid Request');
+class InvalidInputException extends AppException {
+  InvalidInputException([String? message]) : super(message, 'invalid input');
 }
